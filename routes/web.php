@@ -12,4 +12,5 @@
 */
 
 Route::get('/{slug}', 'InvitationController@detail')->name('invitation.detail');
+Route::get('/confirm/{invitationId}/{confirmStatus}', 'InvitationController@confirm')->name('invitation.confirm');
 

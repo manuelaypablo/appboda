@@ -117,7 +117,7 @@
                         <div class="animate-box svg-sm colored">
                             <img src="{{ asset('images/flaticon/svg/004-nature.svg') }}" class="svg" alt="Manuela y Juan Pablo">
                             <h1 class="holder">
-                                <span>La boda de</span>
+                                <span>Bienvenido</span>
                             </h1>
                             <h2>Manuela &amp; Juan Pablo</h2>
                             <p>29.02.2020</p>
@@ -265,91 +265,123 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
                     <img src="{{asset('images/flaticon/svg/005-two.svg')}}" class="svg" alt="Manuela y Juan Pablo">
-                    <h2>Ceremonia &amp; Recepción</h2>
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <p>Nos complace invitarte a nuestra ceremonia y recepción.</p>
-                        </div>
-                    </div>
+                    @if($invitation->has_ceremony)
+                        <h2>Ceremonia &amp; Recepción</h2>
+                    @else
+                        <h2>Recepción</h2>
+                    @endif
                 </div>
             </div>
         </div>
         <div class="row row-bottom-padded-md">
-            <div class="col-md-6 text-center animate-box">
-                <div class="wedding-events">
-                    <div class="ceremony-bg" style="background-image: url({{asset('images/donde/ceremonia.png')}});"></div>
-                    <div class="desc">
-                        <h3>Ceremonia Notarial</h3>
-                        <div class="row">
-                            <div class="col-md-2 col-md-push-5">
-                                <div class="icon-tip">
+            @if($invitation->has_ceremony)
+                <div class="col-md-6  text-center animate-box">
+                    <div class="wedding-events">
+                        <div class="ceremony-bg" style="background-image: url({{asset('images/donde/ceremonia.png')}});"></div>
+                        <div class="desc">
+                            <h3>Ceremonia Notarial</h3>
+                            <div class="row">
+                                <div class="col-md-2 col-md-push-5">
+                                    <div class="icon-tip">
                                             <span class="icon">
                                                 <i class="icon-heart-o"></i>
                                             </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-calendar"></i>
+                                        <span>Sábado</span>
+                                        <span>29 Feb. 2020</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-clock2"></i>
+                                        <span>10:00 AM</span>
+                                        <span>11:00 AM</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-md-pull-1">
-                                <div class="date">
-                                    <i class="icon-calendar"></i>
-                                    <span>Sábado</span>
-                                    <span>29 Feb. 2020</span>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-md-pull-1">
-                                <div class="date">
-                                    <i class="icon-clock2"></i>
-                                    <span>10:00 AM</span>
-                                    <span>11:00 AM</span>
-                                </div>
-                            </div>
+                            <p>Nuestra ceremonia se realizara en la Notaria 13 de Medellin.</p>
+                            <p>
+                                <a href="https://goo.gl/maps/Jbpy518QS2ncPWKB9" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
+                            </p>
                         </div>
-                        <p>Nuestra ceremonia se realizara en la Notaria 13 de Medellin.</p>
-                        <p>
-                            <a href="https://goo.gl/maps/Jbpy518QS2ncPWKB9" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
-                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 text-center animate-box">
-                <div class="wedding-events">
-                    <div class="ceremony-bg" style="background-image: url({{asset('images/donde/recepcion.jpg')}});"></div>
-                    <div class="desc">
-                        <h3>Recepción</h3>
-                        <div class="row">
-                            <div class="col-md-2 col-md-push-5">
-                                <div class="icon-tip">
+                <div class="col-md-6 text-center animate-box">
+                    <div class="wedding-events">
+                        <div class="ceremony-bg" style="background-image: url({{asset('images/donde/recepcion.jpg')}});"></div>
+                        <div class="desc">
+                            <h3>Recepción</h3>
+                            <div class="row">
+                                <div class="col-md-2 col-md-push-5">
+                                    <div class="icon-tip">
                                             <span class="icon">
                                                 <i class="icon-heart-o"></i>
                                             </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-calendar"></i>
+                                        <span>Sábado</span>
+                                        <span>29 Feb. 2020</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-clock2"></i>
+                                        <span>01:00 PM</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-md-pull-1">
-                                <div class="date">
-                                    <i class="icon-calendar"></i>
-                                    <span>Sábado</span>
-                                    <span>29 Feb. 2020</span>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-md-pull-1">
-                                <div class="date">
-                                    <i class="icon-clock2"></i>
-                                    <span>01:00 PM</span>
-                                </div>
-                            </div>
+                            <p>La recepción se realizara en el restaurante El Arriero en Caldas.</p>
+                            <p>
+                                <a href="https://goo.gl/maps/YKMtTLbGEYXAJx1y8" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
+                            </p>
                         </div>
-                        <p>La recepción se realizara en el restaurante El Arriero en Caldas.</p>
-                        <p>
-                            <a href="https://goo.gl/maps/YKMtTLbGEYXAJx1y8" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
-                        </p>
                     </div>
                 </div>
-            </div>
+            @else
+                <div class="col-md-6 col-md-offset-3 text-center animate-box">
+                    <div class="wedding-events">
+                        <div class="ceremony-bg" style="background-image: url({{asset('images/donde/recepcion.jpg')}});"></div>
+                        <div class="desc">
+                            <h3>Recepción</h3>
+                            <div class="row">
+                                <div class="col-md-2 col-md-push-5">
+                                    <div class="icon-tip">
+                                            <span class="icon">
+                                                <i class="icon-heart-o"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-calendar"></i>
+                                        <span>Sábado</span>
+                                        <span>29 Feb. 2020</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-md-pull-1">
+                                    <div class="date">
+                                        <i class="icon-clock2"></i>
+                                        <span>01:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>La recepción se realizara en el restaurante El Arriero en Caldas.</p>
+                            <p>
+                                <a href="https://goo.gl/maps/YKMtTLbGEYXAJx1y8" target="_blank" class="btn btn-primary btn-sm">Ubicación</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="map" class="qbootstrap-map"></div>
-            </div>
-        </div>
+
     </div>
 </div>
 
@@ -361,29 +393,48 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
                     <img src="{{ asset('images/flaticon/svg/005-two.svg') }}" class="svg" alt="Manuela y Juan Pablo">
-                    <h2>Nombre Inivitado,</h2>
-                    <h2>Estas invitado</h2>
+                    <h2>{{ $invitation->name }},</h2>
+                    <h2>Estas invitad@</h2>
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 subtext">
-                            <h3>Porque de cualquier forma hiciste parte de nuestra historia, y esperamos que continúes haciendo parte en esta nueva aventura.</h3>
-                            <h3>Por favor confírmanos tu asistencia:</h3>
+                            <h3 style="font-size: 35px;">Has sido parte de nuestra historia,</h3>
+                            @if($invitation->attend)
+                                <h3 style="font-size: 35px;">Muchas gracias, hemos confirmado tu asistencia 😊</h3>
+                            @else
+                                <h3 style="font-size: 35px;" class="confirm-request">Por favor confírmanos tu asistencia</h3>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row animate-box">
-            <div class="col-md-10 col-md-offset-1">
-                <form class="form-inline">
-                    <div class="col-md-6 col-sm-6">
-                        <button type="submit" class="btn btn-default btn-block">Si, Claro que voy</button>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <button type="submit" class="btn btn-default btn-block" style="background: #5c5050;color: rgb(255, 254, 254);">No, no voy a poder</button>
-                    </div>
-                </form>
+        @if(!$invitation->attend)
+            <div class="row animate-box confirm-buttons">
+                <div class="col-md-10 col-md-offset-1">
+                    <form class="form-inline">
+                        <div class="col-md-6 col-sm-6">
+                            <button
+                                type="button"
+                                class="btn btn-default btn-block btn-confirm-invitation"
+                                data-type-confirm="si"
+                                data-invitation-id="{{$invitation->id}}">
+                                Si, Claro que voy
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <button
+                                type="button"
+                                class="btn btn-default btn-block btn-confirm-invitation"
+                                data-type-confirm="no"
+                                data-invitation-id="{{$invitation->id}}"
+                                style="background: #5c5050;color: rgb(255, 254, 254);">
+                                No, no voy a poder
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        @endif
     </div>
 </div>
 <footer id="footer" role="contentinfo">
@@ -405,16 +456,15 @@
 <!-- Waypoints -->
 <script src="{{ asset('js/jquery.waypoints.min.js')}}"></script>
 <!-- YTPlayer -->
-<script src="{{ asset('js/jquery.mb.YTPlayer.min.js')}}"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
 <!-- Flexslider -->
 <script src="{{ asset('js/jquery.flexslider-min.js')}}"></script>
 <!-- Owl Carousel -->
 <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
 <!-- Parallax -->
 <script src="{{ asset('js/jquery.stellar.min.js')}}"></script>
-<!-- Magnific Popup -->
-<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{ asset('js/magnific-popup-options.js')}}"></script>
+<!-- Parallax -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- Main JS (Do not remove) -->
 <script src="{{ asset('js/main.js')}}"></script>
 </body>
