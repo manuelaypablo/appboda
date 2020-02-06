@@ -10,22 +10,25 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boda - [Manuela y Juan Pablo]</title>
+    <title>Invitación Boda de Manuela y Juan Pablo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-        name="author" content="Manuela y Juan Pablo"/>
+    <meta name="author" content="Manuela y Juan Pablo"/>
+    <meta name="title" content="Invitación Boda de Manuela y Juan Pablo">
+    <meta name="description" content="{{ $invitation->name }} te invitamos para que nos acompañes el día de nuestra boda, por favor ingresa a este enlace para confirmar tu asistencia.">
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content=""/>
-    <meta name="twitter:image" content=""/>
-    <meta name="twitter:url" content=""/>
-    <meta
-        name="twitter:card" content=""/>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manuelaypablo.com/invitacion/orlando">
+    <meta property="og:title" content="Invitación Boda de Manuela y Juan Pablo">
+    <meta property="og:description" content="{{ $invitation->name }} te invitamos para que nos acompañes el día de nuestra boda, por favor ingresa a este enlace para confirmar tu asistencia.">
+    <meta property="og:image" content="{{asset('images/historia/04.jpeg')}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://manuelaypablo.com/invitacion/orlando">
+    <meta property="twitter:title" content="Invitación Boda de Manuela y Juan Pablo">
+    <meta property="twitter:description" content="{{ $invitation->name }} te invitamos para que nos acompañes el día de nuestra boda, por favor ingresa a este enlace para confirmar tu asistencia.">
+    <meta property="twitter:image" content="{{asset('images/historia/04.jpeg')}}">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="{{asset('favicon.ico')}} ">
