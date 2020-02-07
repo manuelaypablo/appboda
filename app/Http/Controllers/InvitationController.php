@@ -51,4 +51,17 @@ class InvitationController extends Controller
             ],500);
         }
     }
+
+    public function respuestas(){
+        try {
+            $invitations = Invitation::orderBy('attend', 'DESC')->get();;
+            if ($invitations != null){
+                return view('respuestas')->with('invitations',$invitations);
+            }else{
+                return response()->view('errors.404');
+            }
+        }catch (\Exception $e){
+            return $e->getMessage();
+        }
+    }
 }
