@@ -21,14 +21,14 @@
     <meta property="og:url" content="https://manuelaypablo.com/invitacion/orlando">
     <meta property="og:title" content="Invitación Boda de Manuela y Juan Pablo">
     <meta property="og:description" content="{{ $invitation->name }} te invitamos para que nos acompañes el día de nuestra boda, por favor ingresa a este enlace para confirmar tu asistencia.">
-    <meta property="og:image" content="{{asset('images/historia/04.jpeg')}}">
+    <meta property="og:image" content="{{asset('images/historia/03.jpeg')}}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://manuelaypablo.com/invitacion/orlando">
     <meta property="twitter:title" content="Invitación Boda de Manuela y Juan Pablo">
     <meta property="twitter:description" content="{{ $invitation->name }} te invitamos para que nos acompañes el día de nuestra boda, por favor ingresa a este enlace para confirmar tu asistencia.">
-    <meta property="twitter:image" content="{{asset('images/historia/04.jpeg')}}">
+    <meta property="twitter:image" content="{{asset('images/historia/03.jpeg')}}">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="{{asset('favicon.ico')}} ">
