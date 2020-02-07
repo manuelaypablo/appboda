@@ -223,7 +223,7 @@
                             <div class="overlay overlay-2"></div>
                             <div class="timeline-heading">
                                 <h3 class="timeline-title">¿Quieres ser mi novio?</h3>
-                                <span class="date">19 de Abril, 2020</span>
+                                <span class="date">19 de Abril, 2010</span>
                             </div>
                             <div class="timeline-body">
                                 <p>Solo habían pasado 5 días de conocernos y no habíamos parado de pensarnos y hablar por un minuto, ese día después de llegar del colegio el me pregunta ¿Nosotros que somos? Mi respuesta fue ¿quieres ser mi novio?.</p>
